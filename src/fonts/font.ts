@@ -1,12 +1,6 @@
 import localFont from 'next/font/local'
 import { Dosis , Crimson_Text , } from 'next/font/google'
 
-export const blunext = localFont({
-    src : '../font/BluuNext-Bold.otf',
-    display: 'swap',
-    variable: '--font-blunext',
-})
-
 export const dosis = Dosis({
     subsets: ['latin'],
     variable: '--font-dosis',
@@ -18,20 +12,26 @@ export const crimsonText = Crimson_Text({
     variable: '--font-crimson-text',
 })
 
+export const blunext = localFont({
+  src: '/fonts/BluuNext-Bold.otf',
+  display: 'swap',
+  variable: '--font-blunext',
+})
+
 export const sfProDisplay = localFont({
-    src: '../font/SFPRODISPLAYREG.otf',
-    display: 'swap',
-    variable: '--font-sf-pro-display',
+  src: '/fonts/SFPRODISPLAYREG.otf',
+  display: 'swap',
+  variable: '--font-sf-pro-display',
 })
 
 export const sfProBold = localFont({
-    src : '../font/SFPRODISPLAY.otf',
-    display: 'swap',
-    variable: '--font-sf-pro-bold',
+  src: '/fonts/SFPRODISPLAY.otf',
+  display: 'swap',
+  variable: '--font-sf-pro-bold',
 })
 
 export const sfProMedium = localFont({
-    src : '../font/SFPRODISPLAYMED.otf',
-    display: 'swap',
-    variable: '--font-sf-pro-medium',
+  src: '/fonts/SFPRODISPLAYMED.otf',
+  display: 'swap',
+  variable: '--font-sf-pro-medium',
 })
