@@ -1,103 +1,100 @@
-import Image from "next/image";
+import { Briefcase, Target, Signature, Rocket } from 'lucide-react';
+import { BriefcaseIcon , RocketLaunchIcon } from '@heroicons/react/24/solid'
 
+import { Safari } from "@/components/magicui/safari";
+import GetStartedBtn from '@/components/buttons/getStartedBtn';
+import TextHolder from '@/components/Animation/textHolder';
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex min-h-screen flex-col ">
+      <section
+        className="h-screen flex flex-col items-center justify-center w-full relative overflow-hidden grainy-bg"
+        style={{
+          backgroundColor: "#fff",
+          backgroundImage: `
+    linear-gradient(to bottom right, rgba(245, 245, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(240, 247, 255, 0.9)),
+    url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)' opacity='0.2'/></svg>")
+  `,
+          backgroundBlendMode: "overlay",
+          backgroundSize: "cover",
+        }}
+      >
+        {/* <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center">
+          <h1 className="text-3xl mb-4 font-blunext">Work am i</h1>
+          <div className="text-3xl sm:text-4xl md:text-6xl max-w-full md:max-w-[890px] font-[700] text-black font-sf-pro-bold leading-tight md:leading-[1.05] flex flex-wrap justify-center items-center gap-2 text-center">
+            <span>The all-in-one</span>
+            <Briefcase className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+            <span>job search tool</span>
+            <span>to help you land job</span>
+            <Target className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+            <span>smarter, faster</span>
+            <Rocket className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+          </div>
+        </div> */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center">
+          <h1 className="text-3xl mb-4 font-blunext">Work am i</h1>
+          <div className="text-3xl sm:text-4xl md:text-6xl  max-w-[400px] md:max-w-[900px] font-[700] text-black font-sf-pro-bold leading-tight md:leading-[1.05] flex flex-wrap justify-center items-center gap-2 text-center">
+            <span>The all-in-one</span>
+            <BriefcaseIcon className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+            <span>search tool</span>
+            <Target className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+            
+            <span>smarter, faster</span>
+            <RocketLaunchIcon className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex flex-col items-center justify-center mt-4">
+          <div className="flex items-center justify-center">
+            <GetStartedBtn />
+          </div>
+        </div>
+
+      </section>
+
+      <section className="px-4 py-8 md:p-10 flex flex-col items-center w-full bg-white">
+        <div className="flex flex-col items-center mb-8">
+          <h2 className="text-3xl md:text-4xl  mb-2 text-center text-primary font-crimson-text">
+            Why <span className="text-black">Work am i?</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl text-center mt-2">
+            Discover how our platform streamlines your job search, making it smarter, faster, and more effective.
+          </p>
+        </div>
+        <Safari
+          className="w-full max-w-full sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1200px] h-auto"
+          url="https://www.example.com"
+          videoSrc='https://videos.pexels.com/video-files/27180348/12091515_2560_1440_50fps.mp4'
+        />
+      </section>
+      <TextHolder>
+        Workami brings your resume, job tracker, and AI feedback together — all in one calm, focused space.
+      </TextHolder>
+      <br />
+      <TextHolder>
+        No more tabs or chaos. Just a single, clean interface to manage your entire job search.
+      </TextHolder>
+      <br />
+
+      <TextHolder>
+        Tailor resumes, decode job descriptions, and track interviews — effortlessly, all in one place.
+      </TextHolder>
+      <br />
+
+      <TextHolder>
+        Built for clarity and momentum. Workami keeps you organized, confident, and ready to land the role.
+      </TextHolder>
+
+      {/* <TextHolder>
+        No clutter. Just clarity.
+      </TextHolder> */}
+
+      <div className="flex flex-col items-center justify-center m-10">
+        <div className="flex items-center justify-center">
+          <GetStartedBtn />
+        </div>
+      </div>
     </div>
   );
 }
