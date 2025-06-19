@@ -13,25 +13,26 @@ export const crimsonText = Crimson_Text({
 })
 
 export const blunext = localFont({
-  src: '/fonts/BluuNext-Bold.otf',
+  src: './BluuNext-Bold.otf',
   display: 'swap',
   variable: '--font-blunext',
 })
 
 export const sfProDisplay = localFont({
-  src: '/fonts/SFPRODISPLAYREG.otf',
+  src: './SFPRODISPLAYREG.otf',
   display: 'swap',
   variable: '--font-sf-pro-display',
 })
 
 export const sfProBold = localFont({
-  src: '/fonts/SFPRODISPLAY.otf',
+  src: './SFPRODISPLAY.otf',
   display: 'swap',
   variable: '--font-sf-pro-bold',
 })
 
 export const sfProMedium = localFont({
-  src: '/fonts/SFPRODISPLAYMED.otf',
+  src: './SFPRODISPLAYMED.otf',
   display: 'swap',
   variable: '--font-sf-pro-medium',
 })
+
