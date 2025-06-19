@@ -19,19 +19,19 @@ export const crimsonText = Crimson_Text({
 })
 
 export const sfProDisplay = localFont({
-    src: '../font/SFPRODISPLAYREGULAR.otf',
+    src: '../font/SFPRODISPLAYREGULAR.OTF',
     display: 'swap',
     variable: '--font-sf-pro-display',
 })
 
 export const sfProBold = localFont({
-    src : '../font/SFPRODISPLAYBOLD.otf',
+    src : '../font/SFPRODISPLAYBOLD.OTF',
     display: 'swap',
     variable: '--font-sf-pro-bold',
 })
 
 export const sfProMedium = localFont({
-    src : '../font/SFPRODISPLAYMEDIUM.otf',
+    src : '../font/SFPRODISPLAYMEDIUM.OTF',
     display: 'swap',
     variable: '--font-sf-pro-medium',
 })
