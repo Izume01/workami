@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import Header from "@/components/Layouts/Header";
 import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
@@ -26,12 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <ClerkProvider>
       <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${blunext.variable} ${dosis.variable} ${crimsonText.variable} ${sfProBold.variable} ${sfProDisplay.variable} ${sfProMedium.variable}`}>
         <body>
           <Header />
           {children}
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>

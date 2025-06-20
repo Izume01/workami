@@ -157,3 +157,9 @@
   90% { transform: translate(-5%, -10%); }
   100% { transform: translate(-15%, -20%); }
 }
+
+@media (max-width: 640px) {
+  .grainy-bg::after {
+    display: none !important;
+  }
+}

@@ -1,5 +1,5 @@
 import { Briefcase, Target, Signature, Rocket } from 'lucide-react';
-import { BriefcaseIcon , RocketLaunchIcon } from '@heroicons/react/24/solid'
+import { BriefcaseIcon, RocketLaunchIcon } from '@heroicons/react/24/solid'
 
 import { Safari } from "@/components/magicui/safari";
 import GetStartedBtn from '@/components/buttons/getStartedBtn';
@@ -32,18 +32,35 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center">
-          <h1 className="text-3xl mb-4 font-blunext">Work am i</h1>
-          <div className="text-3xl sm:text-4xl md:text-6xl  max-w-[400px] md:max-w-[900px] font-[700] text-black font-sf-pro-bold leading-tight md:leading-[1.05] flex flex-wrap justify-center items-center gap-2 text-center">
-            <span>The all-in-one</span>
-            <BriefcaseIcon className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
-            <span>search tool</span>
-            <Target className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
-            
-            <span>smarter, faster</span>
-            <RocketLaunchIcon className="inline w-8 h-8 md:w-12 md:h-12 text-primary mx-1" />
+        <div className="container mx-auto px-4 py-16 flex flex-col items-center text-center">
+          {/* Motto First */}
+          <p className="text-sm md:text-base uppercase tracking-widest text-gray-500 mb-4">
+            Your career, your workplace
+          </p>
+
+          {/* Brand Name */}
+          <h1 className="text-5xl md:text-6xl font-blunext mb-6 text-primary">
+            Workami
+          </h1>
+
+          {/* Tagline */}
+          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10">
+            Smarter, faster, job search tool, all in one place.
+          </p>
+
+          {/* Optional Icons Below, Less Prominent */}
+          <div className="flex flex-wrap items-center justify-center gap-4 text-gray-600 text-lg md:text-xl">
+            <div className="flex items-center gap-2">
+              <BriefcaseIcon className="w-5 h-5 text-primary" />
+              <span>Centralized Tracking</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Target className="w-5 h-5 text-primary" />
+              <span>Smarter Applications</span>
+            </div>
           </div>
         </div>
+
 
         <div className="flex flex-col items-center justify-center mt-4">
           <div className="flex items-center justify-center">
